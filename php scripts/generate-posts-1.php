@@ -14,7 +14,7 @@
  * - \$featured_image: Placeholder image to be used as the featured image for each post.
  */
 
-require_once('../wp-load.php');
+//require_once('../wp-load.php');
 
 echo 'Adding posts...' . "\n";
 
