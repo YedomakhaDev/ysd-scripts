@@ -11,10 +11,10 @@
 # 4. Cleaning up the temporary files after migration.
 #
 # Usage:
-#   ./migrate_repo.sh <GitLab_Repo_URL> <GitHub_Repo_URL>
+#   ./migrate-repo.sh <GitLab_Repo_URL> <GitHub_Repo_URL>
 #
 # Example:
-#   ./migrate_repo.sh https://gitlab.com/user/repo.git https://github.com/user/repo.git
+#   ./migrate-repo.sh https://gitlab.com/user/repo.git https://github.com/user/repo.git
 #
 # Requirements:
 # - Git must be installed and available in the system path.
@@ -40,7 +40,7 @@ fi
 # Variables for repository URLs
 GITLAB_REPO="$1"
 GITHUB_REPO="$2"
-TEMP_DIR="migrate_repo"
+TEMP_DIR="migrate-repo"
 
 # Check if Git is installed
 if ! command -v git &> /dev/null; then
