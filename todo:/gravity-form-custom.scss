@@ -1,0 +1,101 @@
+.gravity-form-custom {
+  .gform_title,
+  .gform_required_legend {
+    display: none;
+  }
+
+  .gform_fields {
+    grid-row-gap: 32px;
+
+    .gfield_label {
+      margin-bottom: 0 !important;
+      position: absolute;
+      left: 0;
+      transform: translateY(55%);
+      color: var(--sk-color-black);
+      transition: transform .3s ease-in-out, color .3s ease-in-out, font-size .3s ease-in-out;
+
+      .gfield_required {
+        display: none;
+      }
+    }
+
+    .gfield {
+      position: relative;
+
+      .ginput_container {
+        input {
+          border: 1px solid var(--sk-color-black);
+          background: transparent;
+          padding: 13px 0;
+          font-size: 24px;
+          line-height: 100% !important;
+          letter-spacing: 0.2872px;
+          color: var(--sk-color-black);
+          outline: none !important;
+          min-height: unset !important;
+
+          &::placeholder {
+            transition: opacity .3s ease-in-out;
+            color: var(--sk-color-black);
+            opacity: 0;
+          }
+
+          &:focus::placeholder {
+            opacity: 0;
+          }
+        }
+      }
+
+      &.focus {
+        .gfield_label {
+          color: var(--sk-color-black);
+          transform: translateY(-70%);
+          font-size: 15px;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+
+    .validation_message {
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+      background: transparent !important;
+      position: absolute;
+      top: calc(100%);
+      font-size: 12px !important;
+      line-height: 1 !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .gform_validation_errors {
+    display: none;
+  }
+
+  .gform_confirmation_message {
+    color: green;
+  }
+
+  .gform_footer {
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative;
+
+    .button {
+      border: none;
+      margin-bottom: 0 !important;
+      padding: 16px 81px;
+    }
+  }
+
+  .gform_ajax_spinner {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+}
